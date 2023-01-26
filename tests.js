@@ -15,11 +15,17 @@ describe('helloWorld', function() {
 });
 
 describe ('sayHello', function (){
-    it('should be defined a function'), function (){
+    it('should be defined a function', function (){
         expect(typeof sayHello).toBe('function');
-    }
-    it("should retrun a string when called"), function() {
-        expect(typeof sayHello()).toBe("string");
-    }
+    });
+    it("should return a string when called", function() {
+        expect(typeof sayHello("")).toBe("string");
+    });
+    it("should return the string 'Hello!' + input when executed", function(){
+        expect(sayHello("Alex")).toBe("Hello, " + "Alex");
+    });
+    it("Should never return 'undefined' when called", function (){
+        expect(sayHello("")).not.toBe(undefined);
+    });
 });
 //commenting

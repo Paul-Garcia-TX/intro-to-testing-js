@@ -1,8 +1,12 @@
 // helloWorld function 
 function helloWorld() {
-    return "Hello, World!";
     console.log("Hello, World!");
+    return "Hello, World!";
+
 }
-function sayHello(){
-    return "Hello!";
+let input = "Alex";
+
+function sayHello(input){
+
+    return "Hello, " + input;
 }
